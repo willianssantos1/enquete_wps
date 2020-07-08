@@ -1,0 +1,9 @@
+{% if lista_ultimas_questoes %}
+    <ul>
+        {% for questao in lista_ultimas_questoes %}
+            <li><a href="{% url 'votacoes:detalhes' question.id %}/">{{ questao.questao_text }}</a></li>
+        {% enfor %}
+        </ul>
+{% else %}
+    <p>Não existem votações disponíveis.</p>
+{% endif %}
